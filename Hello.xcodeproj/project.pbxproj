@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C67B58F1BEEB4E6001DEDF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B58E1BEEB4E6001DEDF9 /* AppDelegate.swift */; };
-		4C67B5911BEEB4E6001DEDF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5901BEEB4E6001DEDF9 /* ViewController.swift */; };
+		4C67B58F1BEEB4E6001DEDF9 /* MHAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B58E1BEEB4E6001DEDF9 /* MHAppDelegate.swift */; };
+		4C67B5911BEEB4E6001DEDF9 /* MHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5901BEEB4E6001DEDF9 /* MHViewController.swift */; };
 		4C67B5941BEEB4E6001DEDF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C67B5921BEEB4E6001DEDF9 /* Main.storyboard */; };
 		4C67B5971BEEB4E6001DEDF9 /* Hello.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5951BEEB4E6001DEDF9 /* Hello.xcdatamodeld */; };
 		4C67B5991BEEB4E6001DEDF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C67B5981BEEB4E6001DEDF9 /* Assets.xcassets */; };
@@ -36,8 +36,8 @@
 
 /* Begin PBXFileReference section */
 		4C67B58B1BEEB4E6001DEDF9 /* Hello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hello.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C67B58E1BEEB4E6001DEDF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C67B5901BEEB4E6001DEDF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C67B58E1BEEB4E6001DEDF9 /* MHAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAppDelegate.swift; sourceTree = "<group>"; };
+		4C67B5901BEEB4E6001DEDF9 /* MHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHViewController.swift; sourceTree = "<group>"; };
 		4C67B5931BEEB4E6001DEDF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C67B5961BEEB4E6001DEDF9 /* Hello.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hello.xcdatamodel; sourceTree = "<group>"; };
 		4C67B5981BEEB4E6001DEDF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 		4C67B58D1BEEB4E6001DEDF9 /* Hello */ = {
 			isa = PBXGroup;
 			children = (
-				4C67B58E1BEEB4E6001DEDF9 /* AppDelegate.swift */,
-				4C67B5901BEEB4E6001DEDF9 /* ViewController.swift */,
+				4C67B58E1BEEB4E6001DEDF9 /* MHAppDelegate.swift */,
+				4C67B5901BEEB4E6001DEDF9 /* MHViewController.swift */,
 				4C67B5921BEEB4E6001DEDF9 /* Main.storyboard */,
 				4C67B5981BEEB4E6001DEDF9 /* Assets.xcassets */,
 				4C67B59A1BEEB4E6001DEDF9 /* LaunchScreen.storyboard */,
@@ -190,6 +190,7 @@
 		4C67B5831BEEB4E6001DEDF9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MH;
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Michael Hulet";
@@ -259,9 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C67B5911BEEB4E6001DEDF9 /* ViewController.swift in Sources */,
+				4C67B5911BEEB4E6001DEDF9 /* MHViewController.swift in Sources */,
 				4C67B5971BEEB4E6001DEDF9 /* Hello.xcdatamodeld in Sources */,
-				4C67B58F1BEEB4E6001DEDF9 /* AppDelegate.swift in Sources */,
+				4C67B58F1BEEB4E6001DEDF9 /* MHAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
