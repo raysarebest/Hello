@@ -9,17 +9,10 @@
 import UIKit
 class MHViewController: UIViewController{
     @IBOutlet weak var phraseLabel: UILabel!
-    var display: Display?
     override func viewWillAppear(animated: Bool) -> Void{
         super.viewWillAppear(animated)
         let edit = UILongPressGestureRecognizer(target: self, action: "presentEditViewController")
         view.addGestureRecognizer(edit)
-    }
-    override func viewDidAppear(animated: Bool) -> Void{
-        super.viewDidAppear(animated)
-        if display == nil{
-            presentEditViewController()
-        }
     }
     override func didReceiveMemoryWarning() -> Void{
         super.didReceiveMemoryWarning()
