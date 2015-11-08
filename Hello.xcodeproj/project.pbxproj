@@ -16,6 +16,8 @@
 		4C67B5A71BEEB4E6001DEDF9 /* HelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5A61BEEB4E6001DEDF9 /* HelloTests.swift */; };
 		4C67B5B21BEEB4E6001DEDF9 /* HelloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5B11BEEB4E6001DEDF9 /* HelloUITests.swift */; };
 		4C67B5C51BEED189001DEDF9 /* MHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5C41BEED189001DEDF9 /* MHCoreDataStack.m */; };
+		4CFE3EC61BEF1ADB00AC8C3D /* MHEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE3EC51BEF1ADB00AC8C3D /* MHEditViewController.swift */; };
+		4CFE3ECA1BEF2CC200AC8C3D /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE3EC81BEF2CC100AC8C3D /* Display.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		4C67B5C21BEED187001DEDF9 /* Hello-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hello-Bridging-Header.h"; sourceTree = "<group>"; };
 		4C67B5C31BEED189001DEDF9 /* MHCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCoreDataStack.h; sourceTree = "<group>"; };
 		4C67B5C41BEED189001DEDF9 /* MHCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCoreDataStack.m; sourceTree = "<group>"; };
+		4CFE3EC51BEF1ADB00AC8C3D /* MHEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHEditViewController.swift; sourceTree = "<group>"; };
+		4CFE3EC81BEF2CC100AC8C3D /* Display.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Display.swift; path = ../Display.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				4C67B5BF1BEED10F001DEDF9 /* Supporting Files */,
 				4C67B58E1BEEB4E6001DEDF9 /* MHAppDelegate.swift */,
 				4C67B5901BEEB4E6001DEDF9 /* MHViewController.swift */,
+				4CFE3EC51BEF1ADB00AC8C3D /* MHEditViewController.swift */,
 			);
 			path = Hello;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				4C67B5C31BEED189001DEDF9 /* MHCoreDataStack.h */,
 				4C67B5C41BEED189001DEDF9 /* MHCoreDataStack.m */,
 				4C67B5951BEEB4E6001DEDF9 /* Hello.xcdatamodeld */,
+				4CFE3EC81BEF2CC100AC8C3D /* Display.swift */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -293,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C67B5911BEEB4E6001DEDF9 /* MHViewController.swift in Sources */,
+				4CFE3EC61BEF1ADB00AC8C3D /* MHEditViewController.swift in Sources */,
+				4CFE3ECA1BEF2CC200AC8C3D /* Display.swift in Sources */,
 				4C67B5971BEEB4E6001DEDF9 /* Hello.xcdatamodeld in Sources */,
 				4C67B5C51BEED189001DEDF9 /* MHCoreDataStack.m in Sources */,
 				4C67B58F1BEEB4E6001DEDF9 /* MHAppDelegate.swift in Sources */,
@@ -529,6 +537,7 @@
 				4C67B5B81BEEB4E6001DEDF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C67B5B91BEEB4E6001DEDF9 /* Build configuration list for PBXNativeTarget "HelloTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +546,7 @@
 				4C67B5BB1BEEB4E6001DEDF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C67B5BC1BEEB4E6001DEDF9 /* Build configuration list for PBXNativeTarget "HelloUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +555,7 @@
 				4C67B5BE1BEEB4E6001DEDF9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

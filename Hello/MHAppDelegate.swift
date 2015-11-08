@@ -25,6 +25,9 @@ class MHAppDelegate: UIResponder, UIApplicationDelegate{
         if !NSUserDefaults.standardUserDefaults().boolForKey(MHApplicationHasSetUpKey){
             // TODO: Add a Core Data entity and continue
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: MHApplicationHasSetUpKey)
+            let demo = NSEntityDescription.insertNewObjectForEntityForName("Display", inManagedObjectContext: MHCoreDataStack.defaultStack()!.managedObjectContext) as! Display
+            demo.phrase = "Hello"
+            MHCoreDataStack.defaultStack()?.saveContext()
         }
         return true
     }

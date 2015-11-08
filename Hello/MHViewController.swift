@@ -8,12 +8,23 @@
 
 import UIKit
 class MHViewController: UIViewController{
-    override func viewDidLoad() -> Void{
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    override func viewWillAppear(animated: Bool) -> Void{
+        super.viewWillAppear(animated)
+        let edit = UILongPressGestureRecognizer(target: self, action: "presentEditViewController")
+        view.addGestureRecognizer(edit)
     }
     override func didReceiveMemoryWarning() -> Void{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask{
+        return .Landscape
+    }
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    func presentEditViewController() -> Void{
+        presentViewController(storyboard!.instantiateViewControllerWithIdentifier("Edit"), animated: true, completion: nil)
+        view.removeGestureRecognizer(view.gestureRecognizers!.first!)
     }
 }
