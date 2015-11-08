@@ -7,10 +7,7 @@
 //
 
 import UIKit
-import CoreData
-
 let MHApplicationHasSetUpKey = "hasSetUp?"
-
 @UIApplicationMain
 class MHAppDelegate: UIResponder, UIApplicationDelegate{
     var window: UIWindow?

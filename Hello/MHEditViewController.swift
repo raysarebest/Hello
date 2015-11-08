@@ -9,5 +9,5 @@
 import UIKit
 
 class MHEditViewController: UITableViewController {
-
+    weak var mainViewController: MHViewController?
 }

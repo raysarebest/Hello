@@ -8,10 +8,18 @@
 
 import UIKit
 class MHViewController: UIViewController{
-    override func viewWillAppear(animated: Bool) -> Void{
-        super.viewWillAppear(animated)
+    @IBOutlet weak var phraseLabel: UILabel!
+    var display: Display?
+    override func viewDidLoad() -> Void{
+        super.viewDidLoad()
         let edit = UILongPressGestureRecognizer(target: self, action: "presentEditViewController")
         view.addGestureRecognizer(edit)
+    }
+    override func viewDidAppear(animated: Bool) -> Void{
+        super.viewDidAppear(animated)
+        if display == nil{
+            presentEditViewController()
+        }
     }
     override func didReceiveMemoryWarning() -> Void{
         super.didReceiveMemoryWarning()
@@ -24,7 +32,9 @@ class MHViewController: UIViewController{
         return true
     }
     func presentEditViewController() -> Void{
-        presentViewController(storyboard!.instantiateViewControllerWithIdentifier("Edit"), animated: true, completion: nil)
+        let next = storyboard!.instantiateViewControllerWithIdentifier("Edit") as! MHEditViewController
+        next.mainViewController = self
+        presentViewController(next, animated: true, completion: nil)
         view.removeGestureRecognizer(view.gestureRecognizers!.first!)
     }
 }
