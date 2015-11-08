@@ -18,6 +18,7 @@
 		4C67B5C51BEED189001DEDF9 /* MHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5C41BEED189001DEDF9 /* MHCoreDataStack.m */; };
 		4CFE3EC61BEF1ADB00AC8C3D /* MHEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE3EC51BEF1ADB00AC8C3D /* MHEditViewController.swift */; };
 		4CFE3ECA1BEF2CC200AC8C3D /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE3EC81BEF2CC100AC8C3D /* Display.swift */; };
+		4CFE3ECC1BEF803700AC8C3D /* MHEditViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFE3ECB1BEF803600AC8C3D /* MHEditViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		4C67B5C41BEED189001DEDF9 /* MHCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCoreDataStack.m; sourceTree = "<group>"; };
 		4CFE3EC51BEF1ADB00AC8C3D /* MHEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHEditViewController.swift; sourceTree = "<group>"; };
 		4CFE3EC81BEF2CC100AC8C3D /* Display.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Display.swift; path = ../Display.swift; sourceTree = "<group>"; };
+		4CFE3ECB1BEF803600AC8C3D /* MHEditViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHEditViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				4C67B58E1BEEB4E6001DEDF9 /* MHAppDelegate.swift */,
 				4C67B5901BEEB4E6001DEDF9 /* MHViewController.swift */,
 				4CFE3EC51BEF1ADB00AC8C3D /* MHEditViewController.swift */,
+				4CFE3ECB1BEF803600AC8C3D /* MHEditViewCell.swift */,
 			);
 			path = Hello;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CFE3ECC1BEF803700AC8C3D /* MHEditViewCell.swift in Sources */,
 				4C67B5911BEEB4E6001DEDF9 /* MHViewController.swift in Sources */,
 				4CFE3EC61BEF1ADB00AC8C3D /* MHEditViewController.swift in Sources */,
 				4CFE3ECA1BEF2CC200AC8C3D /* Display.swift in Sources */,

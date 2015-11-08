@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class MHEditViewController: UITableViewController{
     weak var mainViewController: MHViewController?
     @IBAction func dismiss(sender: UIBarButtonItem) -> Void{
@@ -17,4 +16,7 @@ class MHEditViewController: UITableViewController{
     @IBAction func edit(sender: UIBarButtonItem) -> Void{
         tableView.setEditing(true, animated: true)
     }
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+//        <#code#>
+//    }
 }
