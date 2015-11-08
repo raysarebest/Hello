@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class MHEditViewController: UITableViewController, NSFetchedResultsControllerDelegate{
+class MHEditViewController: UITableViewController, UITextFieldDelegate, NSFetchedResultsControllerDelegate{
     weak var mainViewController: MHViewController?
     var fetchedResultsController: NSFetchedResultsController?
     var editButton: UIBarButtonItem?
@@ -55,6 +55,7 @@ class MHEditViewController: UITableViewController, NSFetchedResultsControllerDel
         catch let error as NSError{
             print("The whole damn thing crashed. Here's why: \(error.localizedDescription)")
         }
+        tableView.setEditing(false, animated: false)
     }
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int{
         guard let count = fetchedResultsController?.sections?.count else{
@@ -73,6 +74,14 @@ class MHEditViewController: UITableViewController, NSFetchedResultsControllerDel
         cell.backgroundColor = UIColor.blackColor()
         cell.textField.text = (fetchedResultsController?.objectAtIndexPath(indexPath) as! Display).phrase
         cell.textField.textColor = UIColor.whiteColor()
+        cell.textField.delegate = self
+        if tableView.editing{
+            print("The table view is editing")
+            cell.textField.userInteractionEnabled = true
+        }
+        else{
+            cell.textField.userInteractionEnabled = false
+        }
         return cell
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) -> Void{
@@ -99,24 +108,44 @@ class MHEditViewController: UITableViewController, NSFetchedResultsControllerDel
         tableView.endUpdates()
     }
     func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) -> Void{
-        // 1
-        switch type {
-        case .Insert:
-            tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Automatic)
-        case .Delete:
-            tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Automatic)
-        default: break
+        switch type{
+            case .Insert:
+                tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Automatic)
+            case .Delete:
+                tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Automatic)
+            default: break
         }
     }
-
     func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) -> Void{
-        // 2
         switch type {
-        case .Insert:
-            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Automatic)
-        case .Delete:
-            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Automatic)
-        default: break
+            case .Insert:
+                tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Automatic)
+            case .Delete:
+                tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Automatic)
+            default: break
+        }
+    }
+    func textFieldShouldEndEditing(textField: UITextField) -> Bool{
+        for cell in tableView.visibleCells{
+            if (cell as! MHEditViewCell).textField == textField{
+                let path = tableView.indexPathForCell(cell)!
+                (fetchedResultsController!.objectAtIndexPath(path) as! Display).phrase = textField.text
+                MHCoreDataStack.defaultStack()?.saveContext()
+                textField.resignFirstResponder()
+                break
+            }
+        }
+        return true
+    }
+    override func setEditing(editing: Bool, animated: Bool) -> Void{
+        super.setEditing(editing, animated: animated)
+        for cell in tableView.visibleCells{
+            if editing{
+                (cell as! MHEditViewCell).textField.userInteractionEnabled = true
+            }
+            else{
+                (cell as! MHEditViewCell).textField.userInteractionEnabled = false
+            }
         }
     }
 }
