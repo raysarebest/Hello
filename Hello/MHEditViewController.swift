@@ -8,6 +8,13 @@
 
 import UIKit
 
-class MHEditViewController: UITableViewController {
+class MHEditViewController: UITableViewController{
     weak var mainViewController: MHViewController?
+    @IBAction func dismiss(sender: UIBarButtonItem) -> Void{
+        MHCoreDataStack.defaultStack()?.saveContext()
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    @IBAction func edit(sender: UIBarButtonItem) -> Void{
+        tableView.setEditing(true, animated: true)
+    }
 }

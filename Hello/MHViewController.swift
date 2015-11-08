@@ -32,8 +32,8 @@ class MHViewController: UIViewController{
         return true
     }
     func presentEditViewController() -> Void{
-        let next = storyboard!.instantiateViewControllerWithIdentifier("Edit") as! MHEditViewController
-        next.mainViewController = self
+        let next = storyboard!.instantiateViewControllerWithIdentifier("Edit") as! UINavigationController
+        (next.viewControllers.first as! MHEditViewController).mainViewController = self
         presentViewController(next, animated: true, completion: nil)
         view.removeGestureRecognizer(view.gestureRecognizers!.first!)
     }

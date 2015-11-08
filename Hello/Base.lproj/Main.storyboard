@@ -74,9 +74,15 @@
                     <navigationItem key="navigationItem" id="5Fm-ss-QKJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="edit" id="jb0-Xo-ZaK">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="edit:" destination="TIz-8R-Md9" id="KK7-ji-2md"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="yg4-kc-hYv">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="dismiss:" destination="TIz-8R-Md9" id="NYn-eT-0rg"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
