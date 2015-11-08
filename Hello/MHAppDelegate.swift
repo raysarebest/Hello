@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+let MHApplicationHasSetUpKey = "hasSetUp?"
+
 @UIApplicationMain
 class MHAppDelegate: UIResponder, UIApplicationDelegate{
     var window: UIWindow?
@@ -16,6 +18,11 @@ class MHAppDelegate: UIResponder, UIApplicationDelegate{
         // Override point for customization after application launch.
         if MHCoreDataStack.defaultStack() == nil{
             MHCoreDataStack.setDefaultToStack(MHCoreDataStack(modelName: "Hello"))
+        }
+        NSUserDefaults.standardUserDefaults().registerDefaults([MHApplicationHasSetUpKey : false])
+        if !NSUserDefaults.standardUserDefaults().boolForKey(MHApplicationHasSetUpKey){
+            // TODO: Add a Core Data entity and continue
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: MHApplicationHasSetUpKey)
         }
         return true
     }
