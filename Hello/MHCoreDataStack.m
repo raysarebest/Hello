@@ -50,7 +50,6 @@ static id cache = nil;
             NSLog(@"Unresolved error %@, %@", error, error.userInfo);
             [[NSException exceptionWithName:@"MHCoreDataException" reason:error.localizedDescription userInfo:error.userInfo] raise];
         }
-        NSLog(@"%@", _persistentStoreCoordinator);
     }
     return _persistentStoreCoordinator;
 }
