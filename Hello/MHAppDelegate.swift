@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  MHAppDelegate.swift
 //  Hello
 //
 //  Created by Michael Hulet on 11/7/15.
@@ -19,7 +19,9 @@ class MHAppDelegate: UIResponder, UIApplicationDelegate{
         if MHCoreDataStack.defaultStack() == nil{
             MHCoreDataStack.setDefaultToStack(MHCoreDataStack(modelName: "Hello"))
         }
+        //This line runs the first time the app is launched and that time only
         NSUserDefaults.standardUserDefaults().registerDefaults([MHApplicationHasSetUpKey : false])
+        //This runs every time
         if !NSUserDefaults.standardUserDefaults().boolForKey(MHApplicationHasSetUpKey){
             // TODO: Add a Core Data entity and continue
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: MHApplicationHasSetUpKey)
