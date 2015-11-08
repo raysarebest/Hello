@@ -15,6 +15,7 @@
 		4C67B59C1BEEB4E6001DEDF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C67B59A1BEEB4E6001DEDF9 /* LaunchScreen.storyboard */; };
 		4C67B5A71BEEB4E6001DEDF9 /* HelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5A61BEEB4E6001DEDF9 /* HelloTests.swift */; };
 		4C67B5B21BEEB4E6001DEDF9 /* HelloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5B11BEEB4E6001DEDF9 /* HelloUITests.swift */; };
+		4C67B5C51BEED189001DEDF9 /* MHCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5C41BEED189001DEDF9 /* MHCoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		4C67B5AD1BEEB4E6001DEDF9 /* HelloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C67B5B11BEEB4E6001DEDF9 /* HelloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloUITests.swift; sourceTree = "<group>"; };
 		4C67B5B31BEEB4E6001DEDF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C67B5C21BEED187001DEDF9 /* Hello-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hello-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C67B5C31BEED189001DEDF9 /* MHCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MHCoreDataStack.h; sourceTree = "<group>"; };
+		4C67B5C41BEED189001DEDF9 /* MHCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MHCoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,10 @@
 		4C67B58D1BEEB4E6001DEDF9 /* Hello */ = {
 			isa = PBXGroup;
 			children = (
+				4C67B5C11BEED149001DEDF9 /* Interface */,
+				4C67B5BF1BEED10F001DEDF9 /* Supporting Files */,
 				4C67B58E1BEEB4E6001DEDF9 /* MHAppDelegate.swift */,
 				4C67B5901BEEB4E6001DEDF9 /* MHViewController.swift */,
-				4C67B5921BEEB4E6001DEDF9 /* Main.storyboard */,
-				4C67B5981BEEB4E6001DEDF9 /* Assets.xcassets */,
-				4C67B59A1BEEB4E6001DEDF9 /* LaunchScreen.storyboard */,
-				4C67B59D1BEEB4E6001DEDF9 /* Info.plist */,
-				4C67B5951BEEB4E6001DEDF9 /* Hello.xcdatamodeld */,
 			);
 			path = Hello;
 			sourceTree = "<group>";
@@ -126,6 +127,36 @@
 				4C67B5B31BEEB4E6001DEDF9 /* Info.plist */,
 			);
 			path = HelloUITests;
+			sourceTree = "<group>";
+		};
+		4C67B5BF1BEED10F001DEDF9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C67B5C21BEED187001DEDF9 /* Hello-Bridging-Header.h */,
+				4C67B59D1BEEB4E6001DEDF9 /* Info.plist */,
+				4C67B5C01BEED11F001DEDF9 /* Core Data */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C67B5C01BEED11F001DEDF9 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C67B5C31BEED189001DEDF9 /* MHCoreDataStack.h */,
+				4C67B5C41BEED189001DEDF9 /* MHCoreDataStack.m */,
+				4C67B5951BEEB4E6001DEDF9 /* Hello.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		4C67B5C11BEED149001DEDF9 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4C67B5921BEEB4E6001DEDF9 /* Main.storyboard */,
+				4C67B5981BEEB4E6001DEDF9 /* Assets.xcassets */,
+				4C67B59A1BEEB4E6001DEDF9 /* LaunchScreen.storyboard */,
+			);
+			name = Interface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +228,7 @@
 				TargetAttributes = {
 					4C67B58A1BEEB4E6001DEDF9 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = K3ZLWH83BT;
 					};
 					4C67B5A11BEEB4E6001DEDF9 = {
 						CreatedOnToolsVersion = 7.2;
@@ -262,6 +294,7 @@
 			files = (
 				4C67B5911BEEB4E6001DEDF9 /* MHViewController.swift in Sources */,
 				4C67B5971BEEB4E6001DEDF9 /* Hello.xcdatamodeld in Sources */,
+				4C67B5C51BEED189001DEDF9 /* MHCoreDataStack.m in Sources */,
 				4C67B58F1BEEB4E6001DEDF9 /* MHAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,7 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -391,7 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -402,10 +435,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Hello/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.hulet.michael.Hello;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hello/Hello-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -413,10 +451,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Hello/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.hulet.michael.Hello;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Hello/Hello-Bridging-Header.h";
 			};
 			name = Release;
 		};
