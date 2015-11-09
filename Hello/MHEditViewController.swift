@@ -34,11 +34,9 @@ class MHEditViewController: UITableViewController, UITextFieldDelegate, NSFetche
                 print("You're a failure. Here's why: \(error?.localizedDescription)")
                 return
             }
-//            let path = self.fetchedResultsController!.indexPathForObject(new)!
-//            self.tableView.insertRowsAtIndexPaths([path], withRowAnimation: .Automatic)
-//            let cell = self.tableView.cellForRowAtIndexPath(path) as! MHEditViewCell
-//            cell.textField.text = new.phrase
-//            cell.textField.becomeFirstResponder()
+            let cell = self.tableView.cellForRowAtIndexPath(self.fetchedResultsController!.indexPathForObject(new)!) as! MHEditViewCell
+            cell.textField.text = new.phrase
+            cell.textField.becomeFirstResponder()
         })
     }
     override func viewDidLoad() -> Void{
@@ -76,7 +74,6 @@ class MHEditViewController: UITableViewController, UITextFieldDelegate, NSFetche
         cell.textField.textColor = UIColor.whiteColor()
         cell.textField.delegate = self
         if tableView.editing{
-            print("The table view is editing")
             cell.textField.userInteractionEnabled = true
         }
         else{
