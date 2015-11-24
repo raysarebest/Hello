@@ -14,6 +14,14 @@ class MHViewController: UIViewController{
         let edit = UILongPressGestureRecognizer(target: self, action: "presentEditViewController")
         view.addGestureRecognizer(edit)
     }
+    override func viewDidAppear(animated: Bool) -> Void{
+        super.viewDidAppear(animated)
+        UIApplication.sharedApplication().idleTimerDisabled = true
+    }
+    override func viewDidDisappear(animated: Bool) -> Void{
+        super.viewDidDisappear(animated)
+        UIApplication.sharedApplication().idleTimerDisabled = false
+    }
     override func didReceiveMemoryWarning() -> Void{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -21,7 +29,7 @@ class MHViewController: UIViewController{
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask{
         return .Landscape
     }
-    override func prefersStatusBarHidden() -> Bool {
+    override func prefersStatusBarHidden() -> Bool{
         return true
     }
     func presentEditViewController() -> Void{

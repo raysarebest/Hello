@@ -14,16 +14,16 @@ static id cache = nil;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-#pragma mark - Core Data Methods
--(BOOL)saveContext{
-    return [self saveContext:nil];
+#pragma mark - State State Mangement
+-(BOOL)save{
+    return [self saveWithError:nil];
 }
--(BOOL)saveContext:(NSError * __autoreleasing  __nullable *)error{
+-(BOOL)saveWithError:(NSError * __autoreleasing  __nullable *)error{
     return self.managedObjectContext.hasChanges ? [self.managedObjectContext save:error] : YES;
 }
--(void)saveContextWithCompletionHandler:(MHSaveCompletionHandler)completion{
+-(void)saveWithCompletionHandler:(MHSaveCompletionHandler)completion{
     NSError *error = nil;
-    completion([self saveContext:&error], error);
+    completion([self saveWithError:&error], error);
 }
 #pragma mark - Core Data Stack
 -(NSManagedObjectContext *)managedObjectContext{
@@ -94,5 +94,15 @@ static id cache = nil;
 }
 -(instancetype)init{
     return [self initWithModelName:[NSString string]];
+}
+#pragma mark - Object Management
+-(__kindof NSManagedObject *)newInstanceOfClass:(Class)class{
+    return [NSEntityDescription insertNewObjectForEntityForName:NSStringFromClass(class) inManagedObjectContext:self.managedObjectContext];
+}
+-(__kindof NSManagedObject *)newEntityOfType:(NSString *)type{
+    return [NSEntityDescription insertNewObjectForEntityForName:type inManagedObjectContext:self.managedObjectContext];
+}
+-(void)deleteObject:(NSManagedObject *)entity{
+    [self.managedObjectContext deleteObject:entity];
 }
 @end

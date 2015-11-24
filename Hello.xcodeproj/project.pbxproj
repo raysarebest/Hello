@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C33BCC91BF9946E0053C794 /* MHCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C33BCC81BF9946D0053C794 /* MHCoreDataStack.swift */; };
 		4C67B58F1BEEB4E6001DEDF9 /* MHAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B58E1BEEB4E6001DEDF9 /* MHAppDelegate.swift */; };
 		4C67B5911BEEB4E6001DEDF9 /* MHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C67B5901BEEB4E6001DEDF9 /* MHViewController.swift */; };
 		4C67B5941BEEB4E6001DEDF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C67B5921BEEB4E6001DEDF9 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C33BCC81BF9946D0053C794 /* MHCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHCoreDataStack.swift; sourceTree = "<group>"; };
 		4C67B58B1BEEB4E6001DEDF9 /* Hello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hello.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C67B58E1BEEB4E6001DEDF9 /* MHAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHAppDelegate.swift; sourceTree = "<group>"; };
 		4C67B5901BEEB4E6001DEDF9 /* MHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				4C67B5C41BEED189001DEDF9 /* MHCoreDataStack.m */,
 				4C67B5951BEEB4E6001DEDF9 /* Hello.xcdatamodeld */,
 				4CFE3EC81BEF2CC100AC8C3D /* Display.swift */,
+				4C33BCC81BF9946D0053C794 /* MHCoreDataStack.swift */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				4CFE3ECA1BEF2CC200AC8C3D /* Display.swift in Sources */,
 				4C67B5971BEEB4E6001DEDF9 /* Hello.xcdatamodeld in Sources */,
 				4C67B5C51BEED189001DEDF9 /* MHCoreDataStack.m in Sources */,
+				4C33BCC91BF9946E0053C794 /* MHCoreDataStack.swift in Sources */,
 				4C67B58F1BEEB4E6001DEDF9 /* MHAppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

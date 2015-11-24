@@ -17,7 +17,7 @@ class MHEditViewController: UITableViewController, UITextFieldDelegate, NSFetche
             navigationItem.leftBarButtonItem = editButton
         }
         else{
-            MHCoreDataStack.defaultStack()?.saveContext()
+            MHCoreDataStack.defaultStack()?.save()
             dismissViewControllerAnimated(true, completion: nil)
         }
     }
@@ -27,9 +27,9 @@ class MHEditViewController: UITableViewController, UITextFieldDelegate, NSFetche
         navigationItem.leftBarButtonItem?.tintColor = UIColor.whiteColor()
     }
     func addEntry() -> Void{
-        let new = NSEntityDescription.insertNewObjectForEntityForName("Display", inManagedObjectContext: MHCoreDataStack.defaultStack()!.managedObjectContext) as! Display
+        let new = MHCoreDataStack.defaultStack()!.newInstanceOfType(Display)
         new.phrase = "Hello"
-        MHCoreDataStack.defaultStack()?.saveContextWithCompletionHandler({ (success: Bool, error: NSError?) -> Void in
+        MHCoreDataStack.defaultStack()?.saveWithCompletionHandler({(success: Bool, error: NSError?) -> Void in
             guard success && error == nil else{
                 print("You're a failure. Here's why: \(error?.localizedDescription)")
                 return
@@ -89,7 +89,7 @@ class MHEditViewController: UITableViewController, UITextFieldDelegate, NSFetche
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) -> Void{
         if editingStyle == .Delete{
             MHCoreDataStack.defaultStack()?.managedObjectContext.deleteObject(fetchedResultsController!.objectAtIndexPath(indexPath) as! NSManagedObject)
-            MHCoreDataStack.defaultStack()?.saveContext()
+            MHCoreDataStack.defaultStack()?.save()
         }
     }
     override func scrollViewWillBeginDragging(scrollView: UIScrollView) -> Void{
@@ -127,7 +127,7 @@ class MHEditViewController: UITableViewController, UITextFieldDelegate, NSFetche
             if (cell as! MHEditViewCell).textField == textField{
                 let path = tableView.indexPathForCell(cell)!
                 (fetchedResultsController!.objectAtIndexPath(path) as! Display).phrase = textField.text
-                MHCoreDataStack.defaultStack()?.saveContext()
+                MHCoreDataStack.defaultStack()?.save()
                 textField.resignFirstResponder()
                 break
             }

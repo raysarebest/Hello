@@ -8,7 +8,7 @@
 @import CoreData;
 /*!
  @typedef MHSaveCompletionHandler
- @discussion Block that is called at the completion of saveContextWithCompletionHandler:
+ @discussion Block that is called at the completion of saveWithCompletionHandler:
  @param success Boolean value to indicate if the save process was successful
  @param error Specifies the error that occured, if any
 */
@@ -53,21 +53,33 @@ typedef void(^MHSaveCompletionHandler)(BOOL success, NSError * __nullable error)
  @brief Writes any changes to the managed object context to the disk
  @returns A boolean value indicating if the save was successful
 */
--(BOOL)saveContext;
+-(BOOL)save;
 /*!
  @discussion Writes any changes to the managed object context to the disk, and modifies the specified error if necessary
  @param error The pointer to an NSError pointer that will indicate the failure, if any
  @returns A boolean value indicating if the save was successful
 */
--(BOOL)saveContext:(NSError * __nullable __autoreleasing * __nullable)error;
+-(BOOL)saveWithError:(NSError * __nullable __autoreleasing * __nullable)error;
 /*!
  @discussion Writes any changes to the managed object context to the disk, and executes the specified block when finished
  @param completion The block that is called when saving finishes
 */
--(void)saveContextWithCompletionHandler:(nullable MHSaveCompletionHandler)completion;
+-(void)saveWithCompletionHandler:(nullable MHSaveCompletionHandler)completion;
 /*!
  @brief Sets up a new instance of MHCoreDataStack
  @deprecated This method will always return nil. Please use initWithModelName: instead
 */
 -(nullable instancetype)init DEPRECATED_ATTRIBUTE;
+/*!
+ @brief Creates a new object of the specified class and inserts it into the managed object context
+ @param class The Class object of the object to be created
+ @returns A new instance of the specified class
+*/
+-(nonnull __kindof NSManagedObject *)newInstanceOfClass:(nonnull Class)class;
+/*!
+ @brief Creates a new object of the specified class string and inserts it into the managed object context
+ @param object The string representing the object to be created
+ @returns A new NSManagedObject or subclass thereof of the specified type
+*/
+-(nonnull __kindof NSManagedObject *)newEntityOfType:(nonnull NSString *)type;
 @end
