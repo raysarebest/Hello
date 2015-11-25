@@ -2,15 +2,15 @@
 //  HelloUITests.swift
 //  HelloUITests
 //
-//  Created by Michael Hulet on 11/7/15.
+//  Created by Michael Hulet on 11/24/15.
 //  Copyright © 2015 Michael Hulet. All rights reserved.
 //
 
 import XCTest
 
-class HelloUITests: XCTestCase{
+class HelloUITests: XCTestCase {
         
-    override func setUp(){
+    override func setUp() {
         super.setUp()
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -23,12 +23,12 @@ class HelloUITests: XCTestCase{
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
-    override func tearDown(){
+    override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample(){
+    func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
