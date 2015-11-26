@@ -13,6 +13,13 @@
 		4C66BCC21C04CBDA000C05C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C66BCC01C04CBDA000C05C4 /* LaunchScreen.storyboard */; };
 		4C66BCCD1C04CBDB000C05C4 /* HelloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66BCCC1C04CBDB000C05C4 /* HelloTests.swift */; };
 		4C66BCD81C04CBDB000C05C4 /* HelloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66BCD71C04CBDB000C05C4 /* HelloUITests.swift */; };
+		4C66BCEF1C066486000C05C4 /* MHPhraseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66BCEE1C066486000C05C4 /* MHPhraseViewController.swift */; };
+		4C66BCF11C066500000C05C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C66BCF01C066500000C05C4 /* CoreData.framework */; };
+		4C66BCF41C068883000C05C4 /* MHSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66BCF31C068883000C05C4 /* MHSelectionViewController.swift */; };
+		4C66BCF61C0688E4000C05C4 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C66BCF51C0688E4000C05C4 /* iAd.framework */; };
+		4C66BCF91C068B6D000C05C4 /* MHPhraseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66BCF81C068B6D000C05C4 /* MHPhraseManager.swift */; };
+		4C66BCFC1C0695A0000C05C4 /* Hello.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C66BCFA1C0695A0000C05C4 /* Hello.xcdatamodeld */; };
+		4C66BCFE1C06966C000C05C4 /* MHCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C66BCFD1C06966C000C05C4 /* MHCoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		4C66BCD31C04CBDB000C05C4 /* HelloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C66BCD71C04CBDB000C05C4 /* HelloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloUITests.swift; sourceTree = "<group>"; };
 		4C66BCD91C04CBDB000C05C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C66BCEE1C066486000C05C4 /* MHPhraseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHPhraseViewController.swift; sourceTree = "<group>"; };
+		4C66BCF01C066500000C05C4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4C66BCF31C068883000C05C4 /* MHSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHSelectionViewController.swift; sourceTree = "<group>"; };
+		4C66BCF51C0688E4000C05C4 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		4C66BCF81C068B6D000C05C4 /* MHPhraseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHPhraseManager.swift; sourceTree = "<group>"; };
+		4C66BCFB1C0695A0000C05C4 /* Hello.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hello.xcdatamodel; sourceTree = "<group>"; };
+		4C66BCFD1C06966C000C05C4 /* MHCoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MHCoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C66BCF61C0688E4000C05C4 /* iAd.framework in Frameworks */,
+				4C66BCF11C066500000C05C4 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,11 +111,9 @@
 		4C66BCB21C04CBDA000C05C4 /* Hello */ = {
 			isa = PBXGroup;
 			children = (
-				4C66BCB31C04CBDA000C05C4 /* MHAppDelegate.swift */,
-				4C66BCBB1C04CBDA000C05C4 /* Main.storyboard */,
-				4C66BCBE1C04CBDA000C05C4 /* Assets.xcassets */,
-				4C66BCC01C04CBDA000C05C4 /* LaunchScreen.storyboard */,
-				4C66BCC31C04CBDA000C05C4 /* Info.plist */,
+				4C66BCF71C068B0A000C05C4 /* Data Modelling */,
+				4C66BCEA1C066388000C05C4 /* Supporting Files */,
+				4C66BCE91C066364000C05C4 /* Interface */,
 			);
 			path = Hello;
 			sourceTree = "<group>";
@@ -120,6 +134,71 @@
 				4C66BCD91C04CBDB000C05C4 /* Info.plist */,
 			);
 			path = HelloUITests;
+			sourceTree = "<group>";
+		};
+		4C66BCE91C066364000C05C4 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4C66BCED1C066442000C05C4 /* Assets */,
+				4C66BCEC1C066431000C05C4 /* Storyboards */,
+				4C66BCEB1C066423000C05C4 /* View Controllers */,
+			);
+			name = Interface;
+			sourceTree = "<group>";
+		};
+		4C66BCEA1C066388000C05C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C66BCF21C066511000C05C4 /* Frameworks */,
+				4C66BCB31C04CBDA000C05C4 /* MHAppDelegate.swift */,
+				4C66BCC31C04CBDA000C05C4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C66BCEB1C066423000C05C4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C66BCF31C068883000C05C4 /* MHSelectionViewController.swift */,
+				4C66BCEE1C066486000C05C4 /* MHPhraseViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4C66BCEC1C066431000C05C4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4C66BCBB1C04CBDA000C05C4 /* Main.storyboard */,
+				4C66BCC01C04CBDA000C05C4 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		4C66BCED1C066442000C05C4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4C66BCBE1C04CBDA000C05C4 /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		4C66BCF21C066511000C05C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C66BCF51C0688E4000C05C4 /* iAd.framework */,
+				4C66BCF01C066500000C05C4 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C66BCF71C068B0A000C05C4 /* Data Modelling */ = {
+			isa = PBXGroup;
+			children = (
+				4C66BCF81C068B6D000C05C4 /* MHPhraseManager.swift */,
+				4C66BCFA1C0695A0000C05C4 /* Hello.xcdatamodeld */,
+				4C66BCFD1C06966C000C05C4 /* MHCoreDataStack.swift */,
+			);
+			name = "Data Modelling";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +333,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C66BCEF1C066486000C05C4 /* MHPhraseViewController.swift in Sources */,
 				4C66BCB41C04CBDA000C05C4 /* MHAppDelegate.swift in Sources */,
+				4C66BCFE1C06966C000C05C4 /* MHCoreDataStack.swift in Sources */,
+				4C66BCFC1C0695A0000C05C4 /* Hello.xcdatamodeld in Sources */,
+				4C66BCF41C068883000C05C4 /* MHSelectionViewController.swift in Sources */,
+				4C66BCF91C068B6D000C05C4 /* MHPhraseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +583,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C66BCFA1C0695A0000C05C4 /* Hello.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C66BCFB1C0695A0000C05C4 /* Hello.xcdatamodel */,
+			);
+			currentVersion = 4C66BCFB1C0695A0000C05C4 /* Hello.xcdatamodel */;
+			path = Hello.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4C66BCA81C04CBDA000C05C4 /* Project object */;
 }
