@@ -22,12 +22,13 @@ class MHCoreDataStack: CustomStringConvertible{
      - Parameter success: Indicates if the save was successful
      - Parameter error: An NSError object containing information as to why the save failed, or `nil` if it succeeded
     */
+
     typealias MHSaveCompletionHandler = (success: Bool, error: NSError?) -> (Void)
 
     //MARK: Properties
 
     ///The name of the model this stack represents
-    private(set) var modelName: String
+    let modelName: String
 
     ///The `NSManagedObjectContext` for the stack
     private(set) lazy var context: NSManagedObjectContext = {
@@ -38,10 +39,10 @@ class MHCoreDataStack: CustomStringConvertible{
     }()
 
     ///The `NSManagedObjectModel` the stack represents
-    private(set) lazy var model: NSManagedObjectModel = NSManagedObjectModel(contentsOfURL: NSBundle(forClass: self.dynamicType).URLForResource(self.modelName, withExtension: "momd")!)!
+    let model: NSManagedObjectModel
 
     ///The Documents directory of the current bundle
-    private(set) lazy var documentsDirectory: NSURL = {
+    let documentsDirectory: NSURL = {
         do{
             return try NSFileManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: true)
         }
@@ -80,6 +81,7 @@ class MHCoreDataStack: CustomStringConvertible{
     init?(modelName: String){
         let modelName = modelName.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         self.modelName = modelName
+        self.model = NSManagedObjectModel(contentsOfURL: NSBundle(forClass: self.dynamicType).URLForResource(modelName, withExtension: "momd")!)!
         guard modelName != "" else{
             return nil
         }
